@@ -22,6 +22,27 @@ final class UInt16Test extends TestCase
         $this->assertEquals($uint16->toUnsigned(-32768), 0x8000);
     }
 
+    public function testConstructor() : void
+    {
+        $uint16 = new UInt16(-1);
+        $this->assertEquals($uint16->toUnsigned(), 0xFFFF);
+    }
+
+    public function testToString() : void
+    {
+        $uint16 = new UInt16();
+        $uint16->set(-1);
+
+        $this->assertEquals((string)$uint16, '         -1 > 0xFFFF (65535)' . PHP_EOL);
+    }
+
+    public function testMinMax() : void
+    {
+        $uint16 = new UInt16(0);
+        $this->assertEquals($uint16->max(), 32767);
+        $this->assertEquals($uint16->min(), -32768);
+    }
+
     public function testExceptionMax() : void
     {
         $this->expectException(UIntException::class);
