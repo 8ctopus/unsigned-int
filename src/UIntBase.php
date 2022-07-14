@@ -12,6 +12,8 @@ abstract class UIntBase
     /**
      * Constructor
      * @param int $number - signed int to convert
+     *
+     * @throws UIntException
      */
     public function __construct(int $number)
     {
@@ -22,12 +24,12 @@ abstract class UIntBase
 
         switch (PHP_INT_SIZE) {
             default:
-                throw new Exception('not implemented');
+                throw new UIntException('not implemented');
 
             case 4:
             case 8:
                 if ($this->number > $this->max || $this->number < $this->min) {
-                    throw new Exception('number out of bounds');
+                    throw new UIntException('number out of bounds');
                 }
         }
     }
