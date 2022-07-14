@@ -96,12 +96,15 @@ abstract class UIntBase
      *
      * @param int $number
      *
+     * @throws UIntException
+     *
      * @return self
      */
     public function set(int $number) : self
     {
         $this->number = $number;
 
+        // convert to throw exception if number is out of bounds
         $this->toUnsigned();
 
         return $this;
