@@ -11,16 +11,27 @@ abstract class UIntBase
 
     /**
      * Constructor
-     * @param int $number - signed int to convert
-     *
-     * @throws UIntException
      */
-    public function __construct(int $number)
+    public function __construct()
     {
-        $this->number = $number;
-
         $this->max = 2 ** ($this->bits - 1) - 1;
         $this->min = - 2 ** ($this->bits - 1);
+    }
+
+    /**
+     * Convert signed int to unsigned int
+     *
+     * @param ?int $number - signed int
+     *
+     * @throws UIntException
+     *
+     * @return int - unsigned int
+     */
+    public function toUnsigned(?int $number = null) : int
+    {
+        if (isset($number)) {
+            $this->number = $number;
+        }
 
         switch (PHP_INT_SIZE) {
             default:
@@ -32,14 +43,7 @@ abstract class UIntBase
                     throw new UIntException('number out of bounds');
                 }
         }
-    }
 
-    /**
-     * Get unsigned int
-     * @return int
-     */
-    public function value() : int
-    {
         if ($this->number >= 0) {
             return $this->number;
         } else {
@@ -47,12 +51,23 @@ abstract class UIntBase
         }
     }
 
-    public function min() : int {
+    public function min() : int
+    {
         return $this->min;
     }
 
-    public function max() : int {
+    public function max() : int
+    {
         return $this->max;
+    }
+
+    public function set(int $number) : self
+    {
+        $this->number = $number;
+
+        $this->toUnsigned();
+
+        return $this;
     }
 
     /**
@@ -61,9 +76,10 @@ abstract class UIntBase
      */
     public function __toString() : string
     {
-        $value = $this->value();
         $pad = $this->bits / 4;
 
-        return str_pad((string) $this->number, 11, ' ', STR_PAD_LEFT) . ' > ' . sprintf("0x%0{$pad}X", $value) . ' ('. $value . ')' . PHP_EOL;
+        $unsigned = $this->toUnsigned($this->number);
+
+        return str_pad((string) $this->number, 11, ' ', STR_PAD_LEFT) . ' > ' . sprintf("0x%0{$pad}X", $unsigned) . ' ('. $unsigned . ')' . PHP_EOL;
     }
 }

@@ -10,22 +10,31 @@ require_once './vendor/autoload.php';
 (new \NunoMaduro\Collision\Provider())->register();
 
 echo "convert signed int 8 to unsigned int 8\n";
-echo new UInt8(127);
-echo new UInt8(1);
-echo new UInt8(0);
-echo new UInt8(-1);
-echo new UInt8(-128);
+
+$uint8 = new UInt8();
+
+echo $uint8->set(127);
+echo $uint8->set(1);
+echo $uint8->set(0);
+echo $uint8->set(-1);
+echo $uint8->set(-128);
 
 echo "\nconvert signed int 16 to unsigned int 16\n";
-echo new UInt16(32767);
-echo new UInt16(1);
-echo new UInt16(0);
-echo new UInt16(-1);
-echo new UInt16(-32768);
+
+$uint16 = new UInt16();
+
+echo $uint16->set(32767);
+echo $uint16->set(1);
+echo $uint16->set(0);
+echo $uint16->set(-1);
+echo $uint16->set(-32768);
 
 echo "\nconvert signed int 32 to unsigned int 32\n";
-echo new UInt32(2147483647);
-echo new UInt32(1);
-echo new UInt32(0);
-echo new UInt32(-1);
-echo new UInt32(-2147483648);
+
+$uint32 = new UInt32();
+
+echo $uint32->set(2147483647);
+echo $uint32->set(1);
+echo $uint32->set(0);
+echo $uint32->set(-1);
+echo $uint32->set(-2147483648);

@@ -12,24 +12,28 @@ final class UInt8Test extends TestCase
 {
     public function testBasic() : void
     {
-        $this->assertEquals((new UInt8(127))->value(), 0x7F);
-        $this->assertEquals((new UInt8(1))->value(), 0x01);
-        $this->assertEquals((new UInt8(0))->value(), 0x00);
-        $this->assertEquals((new UInt8(-1))->value(), 0xFF);
-        $this->assertEquals((new UInt8(-128))->value(), 0x80);
+        $uint8 = new UInt8();
+
+        $this->assertEquals($uint8->toUnsigned(127), 0x7F);
+        $this->assertEquals($uint8->toUnsigned(1), 0x01);
+        $this->assertEquals($uint8->toUnsigned(0), 0x00);
+        $this->assertEquals($uint8->toUnsigned(-1), 0xFF);
+        $this->assertEquals($uint8->toUnsigned(-128), 0x80);
     }
 
     public function testExceptionMax() : void
     {
         $this->expectException(UIntException::class);
 
-        new UInt8(128);
+        $uint8 = new UInt8();
+        $uint8->set(128);
     }
 
     public function testExceptionMin() : void
     {
         $this->expectException(UIntException::class);
 
-        new UInt8(-129);
+        $uint8 = new UInt8();
+        $uint8->set(-129);
     }
 }
