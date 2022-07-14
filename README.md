@@ -6,16 +6,7 @@ php does not implement unsigned integers natively which can cause some headaches
 
 [![Latest Stable Version](http://poser.pugx.org/8ctopus/unsigned-int/v)](https://packagist.org/packages/8ctopus/unsigned-int) [![Total Downloads](http://poser.pugx.org/8ctopus/unsigned-int/downloads)](https://packagist.org/packages/8ctopus/unsigned-int) [![License](http://poser.pugx.org/8ctopus/unsigned-int/license)](https://packagist.org/packages/8ctopus/unsigned-int) [![PHP Version Require](http://poser.pugx.org/8ctopus/unsigned-int/require/php)](https://packagist.org/packages/8ctopus/unsigned-int)
 
-## demo
-
-```sh
-git clone https://github.com/8ctopus/unsigned-int.git
-cd unsigned-int
-composer install
-php demo.php
-```
-
-## install
+## install and demo
 
 ```sh
 composer require 8ctopus/unsigned-int
@@ -29,16 +20,15 @@ use Oct8pus\Unsigned\UInt32;
 require_once './vendor/autoload.php';
 
 echo "convert signed int 8 to unsigned int 8\n";
-echo new UInt8(127);
-echo new UInt8(-128);
+echo (new UInt8(127));
+echo (new UInt8(-128));
 
-echo "\nconvert signed int 16 to unsigned int 16\n";
-echo new UInt16(32767);
-echo new UInt16(-32768);
+```
 
-echo "\nconvert signed int 32 to unsigned int 32\n";
-echo new UInt32(2147483647);
-echo new UInt32(-2147483648);
+```txt
+convert signed int 8 to unsigned int 8
+        127 > 0x7F (127)
+       -128 > 0x80 (128)
 ```
 
 ## tests
