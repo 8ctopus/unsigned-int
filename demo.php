@@ -1,8 +1,8 @@
 <?php
 
-use Oct8pus\Unsigned\UInt8;
 use Oct8pus\Unsigned\UInt16;
 use Oct8pus\Unsigned\UInt32;
+use Oct8pus\Unsigned\UInt8;
 
 require_once './vendor/autoload.php';
 

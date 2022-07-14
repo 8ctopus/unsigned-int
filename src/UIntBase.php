@@ -11,6 +11,7 @@ abstract class UIntBase
 
     /**
      * Constructor
+     *
      * @param ?int $number - signed int
      */
     public function __construct(?int $number = null)
@@ -20,7 +21,21 @@ abstract class UIntBase
         }
 
         $this->max = 2 ** ($this->bits - 1) - 1;
-        $this->min = - 2 ** ($this->bits - 1);
+        $this->min = -2 ** ($this->bits - 1);
+    }
+
+    /**
+     * Debug
+     *
+     * @return string
+     */
+    public function __toString() : string
+    {
+        $pad = $this->bits / 4;
+
+        $unsigned = $this->toUnsigned($this->number);
+
+        return str_pad((string) $this->number, 11, ' ', STR_PAD_LEFT) . ' > ' . sprintf("0x%0{$pad}X", $unsigned) . ' (' . $unsigned . ')' . PHP_EOL;
     }
 
     /**
@@ -73,18 +88,5 @@ abstract class UIntBase
         $this->toUnsigned();
 
         return $this;
-    }
-
-    /**
-     * Debug
-     * @return string
-     */
-    public function __toString() : string
-    {
-        $pad = $this->bits / 4;
-
-        $unsigned = $this->toUnsigned($this->number);
-
-        return str_pad((string) $this->number, 11, ' ', STR_PAD_LEFT) . ' > ' . sprintf("0x%0{$pad}X", $unsigned) . ' ('. $unsigned . ')' . PHP_EOL;
     }
 }

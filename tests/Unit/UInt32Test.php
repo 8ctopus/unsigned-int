@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @internal
- * @covers Oct8pus\Unsigned\UInt32
+ * @covers \Oct8pus\Unsigned\UInt32
  */
 final class UInt32Test extends TestCase
 {
@@ -14,10 +14,10 @@ final class UInt32Test extends TestCase
     {
         $uint32 = new UInt32();
 
-        $this->assertEquals($uint32->toUnsigned(2147483647),  0x7FFFFFFF);
-        $this->assertEquals($uint32->toUnsigned(1),           0x00000001);
-        $this->assertEquals($uint32->toUnsigned(0),           0x00000000);
-        $this->assertEquals($uint32->toUnsigned(-1),          0xFFFFFFFF);
+        $this->assertEquals($uint32->toUnsigned(2147483647), 0x7FFFFFFF);
+        $this->assertEquals($uint32->toUnsigned(1), 0x00000001);
+        $this->assertEquals($uint32->toUnsigned(0), 0x00000000);
+        $this->assertEquals($uint32->toUnsigned(-1), 0xFFFFFFFF);
         $this->assertEquals($uint32->toUnsigned(-2147483648), 0x80000000);
     }
 
