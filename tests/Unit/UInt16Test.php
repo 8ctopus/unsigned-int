@@ -7,6 +7,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * @internal
  * @covers \Oct8pus\Unsigned\UInt16
+ * @covers \Oct8pus\Unsigned\UIntBase
  */
 final class UInt16Test extends TestCase
 {
