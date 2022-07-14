@@ -55,7 +55,9 @@ abstract class UIntBase
 
         switch (PHP_INT_SIZE) {
             default:
+                // @codeCoverageIgnoreStart
                 throw new UIntException('not implemented');
+                // @codeCoverageIgnoreEnd
 
             case 4:
             case 8:
