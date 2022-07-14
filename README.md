@@ -23,6 +23,8 @@ echo "convert signed int 8 to unsigned int 8\n";
 echo (new UInt8(127));
 echo (new UInt8(-128));
 
+$uint8 = new UInt8();
+$uint8->toUnsigned(127);
 ```
 
 ```txt
