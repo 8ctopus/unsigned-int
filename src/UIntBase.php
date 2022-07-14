@@ -11,9 +11,14 @@ abstract class UIntBase
 
     /**
      * Constructor
+     * @param ?int $number - signed int
      */
-    public function __construct()
+    public function __construct(?int $number = null)
     {
+        if (isset($number)) {
+            $this->number = $number;
+        }
+
         $this->max = 2 ** ($this->bits - 1) - 1;
         $this->min = - 2 ** ($this->bits - 1);
     }
