@@ -47,6 +47,14 @@ abstract class UIntBase
         }
     }
 
+    public function min() : int {
+        return $this->min;
+    }
+
+    public function max() : int {
+        return $this->max;
+    }
+
     /**
      * Debug
      * @return string
