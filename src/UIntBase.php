@@ -71,16 +71,33 @@ abstract class UIntBase
         }
     }
 
+    /**
+     * Minimum signed int supported
+     *
+     * @return int
+     */
     public function min() : int
     {
         return $this->min;
     }
 
+    /**
+     * Maximum signed int supported
+     *
+     * @return int
+     */
     public function max() : int
     {
         return $this->max;
     }
 
+    /**
+     * Set signed int
+     *
+     * @param int $number
+     *
+     * @return self
+     */
     public function set(int $number) : self
     {
         $this->number = $number;
