@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @internal
+ *
  * @covers \Oct8pus\Unsigned\UInt32
  * @covers \Oct8pus\Unsigned\UIntBase
  */
@@ -33,7 +34,7 @@ final class UInt32Test extends TestCase
         $uint32 = new UInt32();
         $uint32->set(-1);
 
-        $this->assertEquals((string)$uint32, '         -1 > 0xFFFFFFFF (4294967295)' . PHP_EOL);
+        $this->assertEquals((string) $uint32, '         -1 > 0xFFFFFFFF (4294967295)' . PHP_EOL);
     }
 
     public function testMinMax() : void

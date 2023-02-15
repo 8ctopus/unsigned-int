@@ -43,9 +43,9 @@ abstract class UIntBase
      *
      * @param ?int $number - signed int
      *
-     * @throws UIntException
-     *
      * @return int - unsigned int
+     *
+     * @throws UIntException
      */
     public function toUnsigned(?int $number = null) : int
     {
@@ -98,9 +98,9 @@ abstract class UIntBase
      *
      * @param int $number
      *
-     * @throws UIntException
-     *
      * @return self
+     *
+     * @throws UIntException
      */
     public function set(int $number) : self
     {

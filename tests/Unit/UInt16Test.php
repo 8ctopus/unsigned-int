@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @internal
+ *
  * @covers \Oct8pus\Unsigned\UInt16
  * @covers \Oct8pus\Unsigned\UIntBase
  */
@@ -33,7 +34,7 @@ final class UInt16Test extends TestCase
         $uint16 = new UInt16();
         $uint16->set(-1);
 
-        $this->assertEquals((string)$uint16, '         -1 > 0xFFFF (65535)' . PHP_EOL);
+        $this->assertEquals((string) $uint16, '         -1 > 0xFFFF (65535)' . PHP_EOL);
     }
 
     public function testMinMax() : void

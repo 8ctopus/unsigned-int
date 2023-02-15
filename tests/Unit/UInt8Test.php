@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @internal
+ *
  * @covers \Oct8pus\Unsigned\UInt8
  * @covers \Oct8pus\Unsigned\UIntBase
  */
@@ -33,7 +34,7 @@ final class UInt8Test extends TestCase
         $uint8 = new UInt8();
         $uint8->set(-1);
 
-        $this->assertEquals((string)$uint8, '         -1 > 0xFF (255)' . PHP_EOL);
+        $this->assertEquals((string) $uint8, '         -1 > 0xFF (255)' . PHP_EOL);
     }
 
     public function testMinMax() : void
