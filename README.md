@@ -2,15 +2,17 @@
 
 A php library to convert signed integers to unsigned int.
 
-php does not implement unsigned integers natively which can cause some headaches when unsigned are required. This library hopes to make your life a lot easier.
+[![Latest Stable Version](http://poser.pugx.org/8ctopus/unsigned-int/v)](https://packagist.org/packages/8ctopus/unsigned-int)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/8ctopus/unsigned-int/ci.yaml?branch=master)
+[![Total Downloads](http://poser.pugx.org/8ctopus/unsigned-int/downloads)](https://packagist.org/packages/8ctopus/unsigned-int)
+[![PHP Version Require](http://poser.pugx.org/8ctopus/unsigned-int/require/php)](https://packagist.org/packages/8ctopus/unsigned-int)
+[![License](http://poser.pugx.org/8ctopus/unsigned-int/license)](https://packagist.org/packages/8ctopus/unsigned-int)
 
-[![Latest Stable Version](http://poser.pugx.org/8ctopus/unsigned-int/v)](https://packagist.org/packages/8ctopus/unsigned-int) [![Total Downloads](http://poser.pugx.org/8ctopus/unsigned-int/downloads)](https://packagist.org/packages/8ctopus/unsigned-int) [![License](http://poser.pugx.org/8ctopus/unsigned-int/license)](https://packagist.org/packages/8ctopus/unsigned-int) [![PHP Version Require](http://poser.pugx.org/8ctopus/unsigned-int/require/php)](https://packagist.org/packages/8ctopus/unsigned-int)
+php does not implement unsigned integers natively which can cause some headaches when unsigned are required. This library hopes to make your life a lot easier.
 
 ## install and demo
 
-```sh
-composer require 8ctopus/unsigned-int
-```
+    composer require 8ctopus/unsigned-int
 
 ```php
 use Oct8pus\Unsigned\UInt8;
@@ -35,12 +37,8 @@ convert signed int 8 to unsigned int 8
 
 ## tests
 
-```sh
-vendor/bin/phpunit --coverage-html coverage
-```
+    composer test
 
 ## clean code
 
-```sh
-vendor/bin/php-cs-fixer fix
-```
+    composer fix(-risky)
