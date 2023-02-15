@@ -53,7 +53,7 @@ abstract class UIntBase
             $this->number = $number;
         }
 
-        switch (PHP_INT_SIZE) {
+        switch (\PHP_INT_SIZE) {
             default:
                 // @codeCoverageIgnoreStart
                 throw new UIntException('not implemented');

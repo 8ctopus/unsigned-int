@@ -16,17 +16,17 @@ final class UInt16Test extends TestCase
     {
         $uint16 = new UInt16();
 
-        $this->assertEquals($uint16->toUnsigned(32767), 0x7FFF);
-        $this->assertEquals($uint16->toUnsigned(1), 0x0001);
-        $this->assertEquals($uint16->toUnsigned(0), 0x0000);
-        $this->assertEquals($uint16->toUnsigned(-1), 0xFFFF);
-        $this->assertEquals($uint16->toUnsigned(-32768), 0x8000);
+        static::assertSame($uint16->toUnsigned(32767), 0x7FFF);
+        static::assertSame($uint16->toUnsigned(1), 0x0001);
+        static::assertSame($uint16->toUnsigned(0), 0x0000);
+        static::assertSame($uint16->toUnsigned(-1), 0xFFFF);
+        static::assertSame($uint16->toUnsigned(-32768), 0x8000);
     }
 
     public function testConstructor() : void
     {
         $uint16 = new UInt16(-1);
-        $this->assertEquals($uint16->toUnsigned(), 0xFFFF);
+        static::assertSame($uint16->toUnsigned(), 0xFFFF);
     }
 
     public function testToString() : void
@@ -34,14 +34,14 @@ final class UInt16Test extends TestCase
         $uint16 = new UInt16();
         $uint16->set(-1);
 
-        $this->assertEquals((string) $uint16, '         -1 > 0xFFFF (65535)' . PHP_EOL);
+        static::assertSame((string) $uint16, '         -1 > 0xFFFF (65535)' . PHP_EOL);
     }
 
     public function testMinMax() : void
     {
         $uint16 = new UInt16(0);
-        $this->assertEquals($uint16->max(), 32767);
-        $this->assertEquals($uint16->min(), -32768);
+        static::assertSame($uint16->max(), 32767);
+        static::assertSame($uint16->min(), -32768);
     }
 
     public function testExceptionMax() : void
