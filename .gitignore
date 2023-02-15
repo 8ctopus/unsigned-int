@@ -1,8 +1,9 @@
 # composer
-/vendor/
 /composer.lock
+/vendor/*
 
 # phpunit
+/.phpunit.cache/
 /.phpunit.result.cache
 /coverage/
 
