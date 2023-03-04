@@ -3,7 +3,7 @@
 A php library to convert signed integers to unsigned int.
 
 [![Latest Stable Version](http://poser.pugx.org/8ctopus/unsigned-int/v)](https://packagist.org/packages/8ctopus/unsigned-int)
-![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/8ctopus/unsigned-int/ci.yaml?branch=master)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/8ctopus/unsigned-int/tests.yml?branch=master)
 [![Total Downloads](http://poser.pugx.org/8ctopus/unsigned-int/downloads)](https://packagist.org/packages/8ctopus/unsigned-int)
 [![PHP Version Require](http://poser.pugx.org/8ctopus/unsigned-int/require/php)](https://packagist.org/packages/8ctopus/unsigned-int)
 [![License](http://poser.pugx.org/8ctopus/unsigned-int/license)](https://packagist.org/packages/8ctopus/unsigned-int)
