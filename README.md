@@ -1,12 +1,14 @@
 # Unsigned int
 
-A php library to convert signed integers to unsigned int.
+[![packagist](http://poser.pugx.org/8ctopus/unsigned-int/v)](https://packagist.org/packages/8ctopus/unsigned-int)
+[![downloads](http://poser.pugx.org/8ctopus/unsigned-int/downloads)](https://packagist.org/packages/8ctopus/unsigned-int)
+[![min php version](http://poser.pugx.org/8ctopus/unsigned-int/require/php)](https://packagist.org/packages/8ctopus/unsigned-int)
+[![license](http://poser.pugx.org/8ctopus/unsigned-int/license)](https://packagist.org/packages/8ctopus/unsigned-int)
+[![tests](https://github.com/8ctopus/unsigned-int/actions/workflows/tests.yml/badge.svg)](https://github.com/8ctopus/unsigned-int/actions/workflows/tests.yml)
+![code coverage badge](https://raw.githubusercontent.com/8ctopus/unsigned-int/image-data/coverage.svg)
+![lines of code](https://raw.githubusercontent.com/8ctopus/unsigned-int/image-data/lines.svg)
 
-[![Latest Stable Version](http://poser.pugx.org/8ctopus/unsigned-int/v)](https://packagist.org/packages/8ctopus/unsigned-int)
-![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/8ctopus/unsigned-int/tests.yml?branch=master)
-[![Total Downloads](http://poser.pugx.org/8ctopus/unsigned-int/downloads)](https://packagist.org/packages/8ctopus/unsigned-int)
-[![PHP Version Require](http://poser.pugx.org/8ctopus/unsigned-int/require/php)](https://packagist.org/packages/8ctopus/unsigned-int)
-[![License](http://poser.pugx.org/8ctopus/unsigned-int/license)](https://packagist.org/packages/8ctopus/unsigned-int)
+A php library to convert signed integers to unsigned int.
 
 php does not implement unsigned integers natively which can cause some headaches when unsigned are required. This library hopes to make your life a lot easier.
 
