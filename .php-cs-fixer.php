@@ -1,8 +1,6 @@
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-    ->exclude('vendor/')
-//    ->notPath('src/Symfony/Component/Translation/Tests/fixtures/resources.php')
     ->in('.');
 
 $fixer = (new PhpCsFixer\Config('', ''))
@@ -50,6 +48,7 @@ if (isset($GLOBALS['argv']) && in_array('--allow-risky=yes', $GLOBALS['argv'], t
     $fixer
         ->setRules([
             '@PhpCsFixer:risky' => true,
+            'declare_strict_types' => true,
             'native_function_invocation' => false,
             'phpdoc_to_param_type' => true,
             'phpdoc_to_property_type' => true,
