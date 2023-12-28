@@ -16,17 +16,17 @@ final class UInt32Test extends TestCase
     {
         $uint32 = new UInt32();
 
-        static::assertSame($uint32->toUnsigned(2147483647), 0x7FFFFFFF);
-        static::assertSame($uint32->toUnsigned(1), 0x00000001);
-        static::assertSame($uint32->toUnsigned(0), 0x00000000);
-        static::assertSame($uint32->toUnsigned(-1), 0xFFFFFFFF);
-        static::assertSame($uint32->toUnsigned(-2147483648), 0x80000000);
+        self::assertSame($uint32->toUnsigned(2147483647), 0x7FFFFFFF);
+        self::assertSame($uint32->toUnsigned(1), 0x00000001);
+        self::assertSame($uint32->toUnsigned(0), 0x00000000);
+        self::assertSame($uint32->toUnsigned(-1), 0xFFFFFFFF);
+        self::assertSame($uint32->toUnsigned(-2147483648), 0x80000000);
     }
 
     public function testConstructor() : void
     {
         $uint32 = new UInt32(-1);
-        static::assertSame($uint32->toUnsigned(), 0xFFFFFFFF);
+        self::assertSame($uint32->toUnsigned(), 0xFFFFFFFF);
     }
 
     public function testToString() : void
@@ -34,14 +34,14 @@ final class UInt32Test extends TestCase
         $uint32 = new UInt32();
         $uint32->set(-1);
 
-        static::assertSame((string) $uint32, '         -1 > 0xFFFFFFFF (4294967295)' . PHP_EOL);
+        self::assertSame((string) $uint32, '         -1 > 0xFFFFFFFF (4294967295)' . PHP_EOL);
     }
 
     public function testMinMax() : void
     {
         $uint32 = new UInt32(0);
-        static::assertSame($uint32->max(), 2147483647);
-        static::assertSame($uint32->min(), -2147483648);
+        self::assertSame($uint32->max(), 2147483647);
+        self::assertSame($uint32->min(), -2147483648);
     }
 
     public function testExceptionMax() : void
