@@ -1,9 +1,9 @@
 # Unsigned int
 
-[![packagist](http://poser.pugx.org/8ctopus/unsigned-int/v)](https://packagist.org/packages/8ctopus/unsigned-int)
-[![downloads](http://poser.pugx.org/8ctopus/unsigned-int/downloads)](https://packagist.org/packages/8ctopus/unsigned-int)
-[![min php version](http://poser.pugx.org/8ctopus/unsigned-int/require/php)](https://packagist.org/packages/8ctopus/unsigned-int)
-[![license](http://poser.pugx.org/8ctopus/unsigned-int/license)](https://packagist.org/packages/8ctopus/unsigned-int)
+[![packagist](https://poser.pugx.org/8ctopus/unsigned-int/v)](https://packagist.org/packages/8ctopus/unsigned-int)
+[![downloads](https://poser.pugx.org/8ctopus/unsigned-int/downloads)](https://packagist.org/packages/8ctopus/unsigned-int)
+[![min php version](https://poser.pugx.org/8ctopus/unsigned-int/require/php)](https://packagist.org/packages/8ctopus/unsigned-int)
+[![license](https://poser.pugx.org/8ctopus/unsigned-int/license)](https://packagist.org/packages/8ctopus/unsigned-int)
 [![tests](https://github.com/8ctopus/unsigned-int/actions/workflows/tests.yml/badge.svg)](https://github.com/8ctopus/unsigned-int/actions/workflows/tests.yml)
 ![code coverage badge](https://raw.githubusercontent.com/8ctopus/unsigned-int/image-data/coverage.svg)
 ![lines of code](https://raw.githubusercontent.com/8ctopus/unsigned-int/image-data/lines.svg)
