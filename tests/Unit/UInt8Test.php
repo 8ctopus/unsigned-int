@@ -60,3 +60,4 @@ final class UInt8Test extends TestCase
         $uint8->set(-129);
     }
 }
+
